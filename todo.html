@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today's list</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="todo.css">
+</head>
+<body>
+
+<main class="sheet">
+  <h1 class="tally" id="tally">Nothing on the list yet.</h1>
+  <p class="stamp" id="stamp"></p>
+
+  <div class="compose">
+    <input id="field" type="text" placeholder="Write a task and press enter" autocomplete="off" aria-label="New task">
+    <button id="add" type="button">Add</button>
+  </div>
+
+  <div class="views" role="group" aria-label="Filter tasks">
+    <button class="view" type="button" data-view="all" aria-pressed="true">Everything</button>
+    <button class="view" type="button" data-view="open" aria-pressed="false">To do</button>
+    <button class="view" type="button" data-view="done" aria-pressed="false">Finished</button>
+  </div>
+
+  <ul id="list"></ul>
+
+  <div class="foot">
+    <span id="count"></span>
+    <button id="sweep" type="button" hidden>Clear finished</button>
+  </div>
+</main>
+
+<script src="todo.js"></script>
+</body>
+</html>
